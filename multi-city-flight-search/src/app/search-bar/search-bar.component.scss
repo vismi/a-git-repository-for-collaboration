@@ -1,0 +1,73 @@
+.search-bar-container{
+
+  background: url(../../assets/image.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50rem;
+
+  .card-container.custom-card-container {
+  padding-left:0;
+  padding-right:0;
+  top: 12rem;
+  background-color: rgba(255, 255, 255,0.65);
+
+  .card-header {
+  background-color: rgba(225, 225, 225,0.65);
+
+
+
+  .nav-link{
+
+    border-width: 0;
+  }
+  }
+
+  .card-body {
+
+  .remove-flight{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding-left: 0;
+    padding-right: 0;
+
+      img {
+      width: 1.5rem;
+      @media only screen and (max-width: 600px){
+        padding-top: 1rem;
+        img {
+          width: 2rem;
+        }
+      }
+
+      }
+  }
+
+  .searchFlight {
+  padding-left:0;
+  margin:0;
+  padding-right :0;
+
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+  }
+
+  .form-group:not(.searchFlight){
+    border:  	#606060 1px solid;
+
+padding: 10px;
+
+border-radius: 10px;
+  }
+  }
+}
+#flight-list-outer{
+  position: absolute;
+  top: 58rem;
+  background-color:  #f1f1f1;
+}
+
