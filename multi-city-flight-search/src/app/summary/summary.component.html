@@ -1,0 +1,32 @@
+<div class="row  summary-container col-md-12">
+	<div class="card-header  offset-sm-1 col-sm-10">
+		<h4>Flight Summary</h4>
+	</div>
+	<div class="text-center summary-body  offset-sm-1 col-sm-10" >
+
+		<div class="card-body" *ngFor="let item of journeyItemSelection">
+			<div class="flight-summary row">
+				<div class="col-md-4 departure-information">
+					<h4 class="airport">{{item.localFlightSegments.departureAirport.name}}</h4>
+					<h5>{{item.localFlightSegments.departureDateTime | date : 'shortTime'}}</h5>
+					<span>Terminal {{item.localFlightSegments.departureAirport.terminal}}</span>
+				</div>
+				<div class="plane-img col-md-4 duration-information">
+					<img src="../assets/black-plane.png">
+					<span class="duration">{{item.localFlightSegments.duration | slice:2:7}}</span>
+					<span class="carrierName">{{item.localFlightSegments.marketingCarrier.carrierName}}</span>
+					<span class="flightNo">{{item.localFlightSegments.marketingCarrier.carrierCode}} - {{item.localFlightSegments.marketingCarrier.flightNumber}}</span>
+				</div>
+				<div class="col-md-4 arrival-information">
+					<h4 class="airport">{{item.localFlightSegments.arrivalAirport.name}}</h4>
+					<h5>{{item.localFlightSegments.arrivalDateTime | date : 'shortTime'}}</h5>
+					<span>Terminal {{item.localFlightSegments.arrivalAirport.terminal}}</span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="card-footer offset-sm-1 col-sm-10">
+		<h4>Total Price : {{totalPrice}} GBP</h4>
+	</div>
+</div>
